@@ -9,14 +9,12 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.example.loginregistrationusingroom.R
 import com.example.loginregistrationusingroom.databinding.FragmentSignUpBinding
 import com.example.loginregistrationusingroom.ui.viewmodels.SignUpViewModel
 import com.example.loginregistrationusingroom.utilities.Resource
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
 class SignUpFragment : Fragment() {
@@ -32,7 +30,7 @@ class SignUpFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentSignUpBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -78,7 +76,7 @@ class SignUpFragment : Fragment() {
             val selectedCountry = binding.countrySpinner.selectedItem as String
             if (validateInputs(name, password, selectedCountry)) {
                 signUpViewModel.registerUser(name, password, selectedCountry)
-            }else{
+            } else {
                 Toast.makeText(
                     requireContext(),
                     "Please fill all the fields",

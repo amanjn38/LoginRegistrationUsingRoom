@@ -14,7 +14,8 @@ abstract class UserDatabase : RoomDatabase() {
     companion object {
         @Volatile
         private var INSTANCE: UserDatabase? = null
-
+        // Function to get an instance of the UserDatabase.
+        // It takes the application context as a parameter to access the database.
         fun getInstance(context: Context): UserDatabase {
             return INSTANCE ?: synchronized(this) {
                 val instance = Room.databaseBuilder(

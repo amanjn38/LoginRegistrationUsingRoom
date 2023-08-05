@@ -9,7 +9,6 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.example.loginregistrationusingroom.R
 import com.example.loginregistrationusingroom.databinding.FragmentLoginBinding
@@ -17,7 +16,6 @@ import com.example.loginregistrationusingroom.ui.viewmodels.LoginViewModel
 import com.example.loginregistrationusingroom.utilities.IS_LOGGED_IN
 import com.example.loginregistrationusingroom.utilities.Resource
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
 class LoginFragment : Fragment() {
@@ -34,7 +32,7 @@ class LoginFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentLoginBinding.inflate(inflater, container, false)
         return binding.root
     }

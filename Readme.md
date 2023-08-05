@@ -14,7 +14,7 @@ This Android app allows users to register and authenticate themselves. It includ
 
 ## Installation
 Provide step-by-step instructions on how to install the app on the user's Android device or emulator. For example:
-1. Clone the repository: `git clone https://github.com/username/repository-name.git`
+1. Clone the repository: `https://github.com/amanjn38/LoginRegistrationUsingRoom`
 2. Open the project in Android Studio.\
 3. Connect a device or launch an Android emulator.
 4. Run the application by clicking on the "Run" menu and selecting "Run 'app'".

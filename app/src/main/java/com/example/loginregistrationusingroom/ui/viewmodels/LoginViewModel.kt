@@ -14,10 +14,14 @@ import javax.inject.Inject
 
 @HiltViewModel
 class LoginViewModel @Inject constructor(private val userRepository: UserRepository) : ViewModel() {
+    // MutableLiveData to hold the login status result.
     private val _loginStatusLiveData = MutableLiveData<Resource<User>>()
+
+    // LiveData exposed to observe the login status result.
     val loginStatusLiveData: LiveData<Resource<User>>
         get() = _loginStatusLiveData
 
+    // Function to perform user login.
     fun login(username: String, password: String) {
         viewModelScope.launch(Dispatchers.IO) {
             try {
@@ -39,6 +43,7 @@ class LoginViewModel @Inject constructor(private val userRepository: UserReposit
         }
     }
 
+    // Function to clear login data, usually called when resetting the login process.
     fun clearLoginData() {
         _loginStatusLiveData.value = Resource.Loading(null)
     }
