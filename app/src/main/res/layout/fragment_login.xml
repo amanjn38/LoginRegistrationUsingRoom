@@ -57,7 +57,7 @@
         android:id="@+id/et_password"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/btn_round_unselected_1"
         android:drawableStart="@drawable/outline_lock_24"
         android:gravity="center"

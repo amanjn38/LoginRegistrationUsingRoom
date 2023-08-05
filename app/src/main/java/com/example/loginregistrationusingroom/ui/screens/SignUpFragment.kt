@@ -80,7 +80,7 @@ class SignUpFragment : Fragment() {
                 Toast.makeText(
                     requireContext(),
                     "Please fill all the fields",
-                    Toast.LENGTH_LONG
+                    Toast.LENGTH_SHORT
                 ).show()
             }
         }
@@ -129,7 +129,7 @@ class SignUpFragment : Fragment() {
             Toast.makeText(
                 requireContext(),
                 "Please enter the name",
-                Toast.LENGTH_LONG
+                Toast.LENGTH_SHORT
             ).show()
             return false
         }
@@ -139,7 +139,7 @@ class SignUpFragment : Fragment() {
             Toast.makeText(
                 requireContext(),
                 "The minimum length of the password should be 8",
-                Toast.LENGTH_LONG
+                Toast.LENGTH_SHORT
             ).show()
             return false
         }
@@ -172,7 +172,7 @@ class SignUpFragment : Fragment() {
             Toast.makeText(
                 requireContext(),
                 "The password should include atleast one number, special characters[!@#\$%&()], one lowercase letter, and one uppercase letter",
-                Toast.LENGTH_LONG
+                Toast.LENGTH_SHORT
             ).show()
             return false
         }
